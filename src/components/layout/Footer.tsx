@@ -1,0 +1,145 @@
+import React from 'react';
+
+export const Footer: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer className="w-full bg-[#663B14] text-[#F2ECE4] border-t border-[#E8E2D9]/20">
+      <div className="max-w-[1440px] mx-auto px-6 lg:px-8 pt-16 pb-12">
+        
+        {/* Grid Responsivo (1 col en mobile, 5 cols en desktop) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-14 border-b border-[#F2ECE4]/15">
+          
+          {/* Columna 1: Logo & Filosofía */}
+          <div className="lg:col-span-1 space-y-4">
+            <div className="flex flex-col items-start select-none">
+              <span className="font-serif text-4xl font-bold tracking-tight text-[#F2ECE4] leading-none">
+                M
+              </span>
+              <span className="font-serif text-xs font-medium tracking-widest text-[#F2ECE4]/80 lowercase -mt-1">
+                miga
+              </span>
+            </div>
+            <p className="font-sans text-xs text-[#F2ECE4]/75 leading-relaxed">
+              Obrador artesanal casero dedicado al rescate de la panadería de fermentación lenta y repostería honesta elaborada con ingredientes nobles.
+            </p>
+          </div>
+
+          {/* Columna 2: Navegación Rápida */}
+          <div className="space-y-3">
+            <h4 className="font-serif text-sm font-semibold text-[#F2ECE4] tracking-wide">
+              Navegación
+            </h4>
+            <ul className="space-y-2 text-xs font-sans text-[#F2ECE4]/75">
+              <li>
+                <a href="#" className="hover:text-white transition-colors">Inicio</a>
+              </li>
+              <li>
+                <a href="#catalogo" className="hover:text-white transition-colors">Catálogo de Hogazas</a>
+              </li>
+              <li>
+                <a href="#personalizar" className="hover:text-white transition-colors">Pasteles Personalizados</a>
+              </li>
+              <li>
+                <a href="#proceso" className="hover:text-white transition-colors">Cómo trabajamos</a>
+              </li>
+              <li>
+                <a href="#faq" className="hover:text-white transition-colors">Preguntas Frecuentes</a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Columna 3: Horarios & Entrega */}
+          <div className="space-y-3">
+            <h4 className="font-serif text-sm font-semibold text-[#F2ECE4] tracking-wide">
+              Horneado & Envíos
+            </h4>
+            <div className="space-y-2 text-xs font-sans text-[#F2ECE4]/75 leading-relaxed">
+              <p>
+                <strong className="text-white block font-medium">Días de Horneado:</strong>
+                Miércoles a Sábado
+              </p>
+              <p>
+                <strong className="text-white block font-medium">Políticas de Anticipación:</strong>
+                Mínimo 24 a 48 horas previas para masas fermentadas.
+              </p>
+              <p>
+                <strong className="text-white block font-medium">Zonas de Entrega:</strong>
+                Entregas locales programadas y recolección en taller.
+              </p>
+            </div>
+          </div>
+
+          {/* Columna 4: Redes Sociales */}
+          <div className="space-y-3">
+            <h4 className="font-serif text-sm font-semibold text-[#F2ECE4] tracking-wide">
+              Comunidad
+            </h4>
+            <p className="text-xs text-[#F2ECE4]/75 mb-3">
+              Comparte el amor por el pan bien hecho:
+            </p>
+            <div className="flex items-center gap-3">
+              {/* Instagram */}
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram de Miga"
+                className="w-8 h-8 rounded-full bg-[#F2ECE4]/10 hover:bg-[#F2ECE4]/20 flex items-center justify-center transition-colors text-[#F2ECE4]"
+              >
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                </svg>
+              </a>
+
+              {/* Facebook */}
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Facebook de Miga"
+                className="w-8 h-8 rounded-full bg-[#F2ECE4]/10 hover:bg-[#F2ECE4]/20 flex items-center justify-center transition-colors text-[#F2ECE4]"
+              >
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          {/* Columna 5: Contacto */}
+          <div className="space-y-3">
+            <h4 className="font-serif text-sm font-semibold text-[#F2ECE4] tracking-wide">
+              Contacto Directo
+            </h4>
+            <p className="text-xs text-[#F2ECE4]/75">
+              WhatsApp de pedidos:
+            </p>
+            <a
+              href="https://wa.me/5210000000000"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-block text-sm font-semibold text-[#F2ECE4] hover:underline"
+            >
+              +52 (123) 456-7890
+            </a>
+            <p className="text-[11px] text-[#F2ECE4]/60 italic mt-2">
+              * Solo pedidos con reserva previa. No contamos con mostrador abierto permanente.
+            </p>
+          </div>
+
+        </div>
+
+        {/* Barra Inferior Copyright */}
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#F2ECE4]/60 gap-4">
+          <p>© {currentYear} Miga Panadería & Repostería Artesanal. Todos los derechos reservados.</p>
+          <div className="flex gap-6">
+            <a href="#" className="hover:text-white transition-colors">Aviso de Privacidad</a>
+            <a href="#" className="hover:text-white transition-colors">Términos de Servicio</a>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+  );
+};
