@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export type NavPage = 'inicio' | 'catalogo' | 'personalizar' | 'proceso' | 'contacto';
+export type NavPage = 'inicio' | 'catalogo' | 'personalizar' | 'proceso' | 'contacto' | 'carrito';
 
 export interface NavbarProps {
   cartCount?: number;
